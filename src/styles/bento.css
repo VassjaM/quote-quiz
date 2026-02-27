@@ -1,0 +1,9 @@
+/* - BENTO STYLES - */
+
+.bento {
+  display: grid;
+  grid-template-columns: 180px 1fr 160px;
+  gap: 12px;
+  width: 100%;
+  max-width: 920px;
+}
