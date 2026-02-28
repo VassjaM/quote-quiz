@@ -9,8 +9,8 @@
 }
 
 .app-body {
-  background: black;
-  color: white;
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: var(--font-primary);
   min-height: 100vh;
   display: flex;
