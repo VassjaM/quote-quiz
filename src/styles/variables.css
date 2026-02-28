@@ -1,5 +1,36 @@
 /* ─ CSS VARIABLES ─ */
 
 :root {
+  /* - COLORS - */
+  --bg-color: #0a0a0a;
+  --text-color: #f0ece4;
+  --card-color: #141414;
+  --card-hover-color: #1a1a1a;
+  --border-color: #2a2a2a;
+  --muted-color: #666;
+  --accent-color: #d4a843;
+  --accent-dim-color: rgba(212, 168, 67, 0.12);
+  --correct-color: #4ade80;
+  --wrong-color: #f87171;
+
+  /* - RADIUS - */
+  --radius: 20px;
+
+  /* - FONTS - */
+  --font-primary: "DM Sans", sans-serif;
   /* TODO: add CSS variables here */
+}
+
+/* - THEME STATES - */
+.state-correct {
+  --accent-color: #4ade80;
+  --accent-dim-color: rgba(74, 222, 128, 0.12);
+}
+.state-wrong {
+  --accent-color: #f87171;
+  --accent-dim-color: rgba(248, 113, 113, 0.12);
+}
+.state-neutral {
+  --accent-color: #d4a843;
+  --accent-dim-color: rgba(212, 168, 67, 0.12);
 }
