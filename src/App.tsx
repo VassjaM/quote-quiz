@@ -1,15 +1,13 @@
-
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
-  
-
   return (
     <div className="app-body">
       <div className="bento">
-        TODO: add components here
+        <ProfileCard lastCorrect={state.lastCorrect} phase={state.phase} />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
