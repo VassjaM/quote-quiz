@@ -1,14 +1,25 @@
-import { useKanyeQuote } from './hooks/useKanyeQuote'
-import { useGameState } from './hooks/useGameState'
+import { useKanyeQuote } from "./hooks/useKanyeQuote";
+import { useGameState } from "./hooks/useGameState";
 import ProfileCard from "./components/ProfileCard";
-import StreakCard from './components/StreakCard'
-import QuoteCard from './components/QuoteCard'
-import ScoreCard from './components/ScoreCard'
-import HistoryCard from './components/HistoryCard'
-import SkipCard from './components/SkipCard'
-import AboutCard from './components/AboutCard'
+import StreakCard from "./components/StreakCard";
+import QuoteCard from "./components/QuoteCard";
+import ScoreCard from "./components/ScoreCard";
+import HistoryCard from "./components/HistoryCard";
+import SkipCard from "./components/SkipCard";
+import AboutCard from "./components/AboutCard";
 
 function App() {
+  const { currentQuote, loading, fetchQuote } = useKanyeQuote();
+  const { state, theme, answer, isAnimating } = useGameState(
+    currentQuote,
+    fetchQuote,
+  );
+
+  const handleSkip = () => {
+    if (isAnimating) return;
+    fetchQuote();
+  };
+
   return (
     <div className="app-body">
       <div className="bento">
