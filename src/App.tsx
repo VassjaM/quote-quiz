@@ -1,3 +1,5 @@
+import { useKanyeQuote } from './hooks/useKanyeQuote'
+import { useGameState } from './hooks/useGameState'
 import ProfileCard from "./components/ProfileCard";
 import StreakCard from './components/StreakCard'
 import QuoteCard from './components/QuoteCard'
