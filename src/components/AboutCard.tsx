@@ -1,38 +1,45 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from "react";
 
 interface ToastState {
-  visible: boolean
-  exiting: boolean
+  visible: boolean;
+  exiting: boolean;
 }
 
 export default function AboutCard() {
-  const [toast, setToast] = useState<ToastState>({ visible: false, exiting: false })
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [toast, setToast] = useState<ToastState>({
+    visible: false,
+    exiting: false,
+  });
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = () => {
     // if already visible, reset timer and show again
-    if (timerRef.current) clearTimeout(timerRef.current)
-    setToast({ visible: true, exiting: false })
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setToast({ visible: true, exiting: false });
 
     timerRef.current = setTimeout(() => {
-      setToast({ visible: true, exiting: true })
-      setTimeout(() => setToast({ visible: false, exiting: false }), 400)
-    }, 3500)
-  }
+      setToast({ visible: true, exiting: true });
+      setTimeout(() => setToast({ visible: false, exiting: false }), 400);
+    }, 3500);
+  };
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      if (timerRef.current) clearTimeout(timerRef.current)
-    }
-  }, [])
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <>
       <div className="card card-about">
         <span className="annotation">about</span>
         <div className="about-inner">
-          <button className="about-btn" onClick={showToast} aria-label="Show info">
+          <button
+            className="about-btn"
+            onClick={showToast}
+            aria-label="Show info"
+          >
             <span className="about-icon">?</span>
           </button>
           <div className="about-text">
@@ -44,13 +51,16 @@ export default function AboutCard() {
 
       {/* Toast Portal */}
       {toast.visible && (
-        <div className={`toast ${toast.exiting ? 'toast-exit' : 'toast-enter'}`}>
+        <div
+          className={`toast ${toast.exiting ? "toast-exit" : "toast-enter"}`}
+        >
           <div className="toast-emoji">🎤</div>
           <div className="toast-content">
             <div className="toast-title">How to play</div>
             <div className="toast-body">
-              A Kanye quote appears — you decide if it's <strong>real</strong> or <strong>fake</strong>.
-              Every quote from the API is real. Try not to get fooled!
+              A Kanye quote appears — you decide if it's <strong>real</strong>{" "}
+              or <strong>fake</strong>. Every quote from the API is real. Try
+              not to get fooled!
             </div>
           </div>
           <button
@@ -63,5 +73,5 @@ export default function AboutCard() {
         </div>
       )}
     </>
-  )
+  );
 }

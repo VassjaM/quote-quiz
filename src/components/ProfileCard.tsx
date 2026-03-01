@@ -1,31 +1,31 @@
 /* - COMPONENT FOR THE PROFILE CARD - */
 
-import { useEffect, useState } from 'react'
-import type { GamePhase } from '../types'
+import { useEffect, useState } from "react";
+import type { GamePhase } from "../types";
 
 interface Props {
-  lastCorrect: boolean | null
-  phase: GamePhase
+  lastCorrect: boolean | null;
+  phase: GamePhase;
 }
 
 export default function ProfileCard({ lastCorrect, phase }: Props) {
-  const [avatar, setAvatar] = useState('😐')
-  const [mood, setMood] = useState('😑 Unimpressed')
+  const [avatar, setAvatar] = useState("😐");
+  const [mood, setMood] = useState("😑 Unimpressed");
 
   useEffect(() => {
-    if (phase === 'answered') {
+    if (phase === "answered") {
       if (lastCorrect) {
-        setAvatar('😤')
-        setMood("😤 That's right")
+        setAvatar("😤");
+        setMood("😤 That's right");
       } else {
-        setAvatar('😒')
-        setMood('😒 Disappointed')
+        setAvatar("😒");
+        setMood("😒 Disappointed");
       }
-    } else if (phase === 'idle') {
-      setAvatar('😐')
-      setMood('😑 Unimpressed')
+    } else if (phase === "idle") {
+      setAvatar("😐");
+      setMood("😑 Unimpressed");
     }
-  }, [phase, lastCorrect])
+  }, [phase, lastCorrect]);
 
   return (
     <div className="card card-profile">
@@ -34,8 +34,12 @@ export default function ProfileCard({ lastCorrect, phase }: Props) {
       <div className="mood-label">{mood}</div>
       <div className="profile-name">Real or Fake?</div>
       <p className="profile-sub">
-        Can you tell a real<br />Kanye quote apart<br />from a fake one?
+        Can you tell a real
+        <br />
+        Kanye quote apart
+        <br />
+        from a fake one?
       </p>
     </div>
-  )
+  );
 }
