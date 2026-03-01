@@ -1,39 +1,32 @@
 /* - SKIP CARD - */
+.card.card-skip {
+  padding: 12px;
+}
 .card-skip {
   grid-column: 3; grid-row: 3;
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: stretch;
-}
-.skip-inner {
-  display: flex; flex-direction: column;
-  align-items: center; gap: 10px;
-}
-.skip-btn-big {
-  width: 100%; padding: 14px 10px;
-  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   border: 1px solid var(--border-color);
   background: transparent;
   color: var(--muted-color);
+  cursor: pointer;
+  transition: all 0.25s;
   font-family: 'DM Sans', sans-serif;
-  cursor: pointer; transition: all 0.25s;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
 }
-.skip-btn-big:hover {
+.card-skip:hover {
   color: var(--text-color);
   border-color: #555;
   background: rgba(255,255,255,0.03);
   transform: translateY(-1px);
 }
-.skip-icon { font-size: 16px; transition: transform 0.3s; }
-.skip-btn-big:hover .skip-icon { transform: rotate(-180deg); }
-.skip-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; }
-.skip-shortcut {
-  font-family: 'DM Mono', monospace; font-size: 9px;
-  color: var(--muted-color); letter-spacing: 0.06em;
+.skip-icon {
+  font-size: 18px;
+  transition: transform 0.3s;
 }
-kbd {
-  background: #1e1e1e; border: 1px solid #333;
-  border-radius: 4px; padding: 1px 5px;
-  font-family: 'DM Mono', monospace; font-size: 9px;
-  color: var(--muted-color);
+.card-skip:hover .skip-icon {
+  transform: rotate(-180deg);
+}
+.skip-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
 }

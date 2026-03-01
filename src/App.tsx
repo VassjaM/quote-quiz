@@ -40,9 +40,10 @@ function App() {
 
         <HistoryCard history={state.history} />
 
-        <SkipCard onSkip={handleSkip} />
-
-        <AboutCard />
+        <div className=" card-bottom-right">
+          <SkipCard onSkip={handleSkip} />
+          <AboutCard />
+        </div>
       </div>
     </div>
   );

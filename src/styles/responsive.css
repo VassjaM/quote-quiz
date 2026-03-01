@@ -1,4 +1,4 @@
-/* - RESPONSIVE MOBILE - */
+/* - RESPONSIVE TABLET - */
 @media (max-width: 600px) {
   .app-body { padding: 12px; align-items: flex-start; padding-top: 16px; }
   .bento {
@@ -30,9 +30,16 @@
   .profile-sub { display: none; }
   .mood-label { font-size: 9px; padding: 3px 7px; }
   /* Skip + About nebeneinander unten rechts */
-  .card-skip { grid-column: 2 / -1; grid-row: 3; padding: 10px; }
-  .card-about { grid-column: 2 / -1; grid-row: 4; padding: 10px; }
-  .skip-btn-big { padding: 10px 8px; }
+  .card-bottom-right {
+    grid-column: 2 / -1;
+    grid-row: 3 / 5;
+    flex-direction: row;
+  }
+  .card.card-skip,
+  .card-about {
+    flex: 1;
+    flex-direction: column;
+  }
   .skip-label { font-size: 10px; }
   .annotation { display: none; }
   .feedback-text { font-size: 44px; }

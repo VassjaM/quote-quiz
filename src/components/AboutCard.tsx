@@ -13,7 +13,6 @@ export default function AboutCard() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = () => {
-    // if already visible, reset timer and show again
     if (timerRef.current) clearTimeout(timerRef.current);
     setToast({ visible: true, exiting: false });
 
@@ -23,7 +22,6 @@ export default function AboutCard() {
     }, 3500);
   };
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
@@ -34,22 +32,16 @@ export default function AboutCard() {
     <>
       <div className="card card-about">
         <span className="annotation">about</span>
-        <div className="about-inner">
-          <button
-            className="about-btn"
-            onClick={showToast}
-            aria-label="Show info"
-          >
-            <span className="about-icon">?</span>
-          </button>
-          <div className="about-text">
-            <div className="about-title">How to play</div>
-            <div className="about-sub">Tap ? for info</div>
-          </div>
-        </div>
+        <button
+          className="about-btn"
+          onClick={showToast}
+          aria-label="Show info"
+        >
+          <span className="about-icon">?</span>
+        </button>
+        <div className="about-title">How to play</div>
       </div>
 
-      {/* Toast Portal */}
       {toast.visible && (
         <div
           className={`toast ${toast.exiting ? "toast-exit" : "toast-enter"}`}

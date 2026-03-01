@@ -18,17 +18,9 @@ export default function SkipCard({ onSkip }: Props) {
   }, [onSkip]);
 
   return (
-    <div className="card card-skip">
-      <span className="annotation">skip</span>
-      <div className="skip-inner">
-        <button className="skip-btn-big" onClick={onSkip}>
-          <span className="skip-icon">↻</span>
-          <span className="skip-label">Skip Quote</span>
-        </button>
-        <div className="skip-shortcut">
-          <kbd>Space</kbd> to skip
-        </div>
-      </div>
-    </div>
+    <button className="card card-skip" onClick={onSkip}>
+      <span className="skip-icon">↻</span>
+      <span className="skip-label">Skip Quote</span>
+    </button>
   );
 }
