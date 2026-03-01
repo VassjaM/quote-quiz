@@ -57,7 +57,7 @@ export default function QuoteCard({
           : "✗ wrong — it was actually a fake quote!";
       }
     }
-    return "tap to reveal · next quote auto-loads";
+    return "next quote auto-loads";
   };
 
   const feedbackText =
