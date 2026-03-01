@@ -44,4 +44,13 @@
   .annotation { display: none; }
   .feedback-text { font-size: 44px; }
   .toast { bottom: 16px; }
+  .game-title {
+    margin-bottom: 14px;
+  }
+  .game-title-main {
+    font-size: 48px;
+  }
+  .game-title-sub {
+    font-size: 10px;
+  }
 }
