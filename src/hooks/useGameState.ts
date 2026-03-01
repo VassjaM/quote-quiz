@@ -30,7 +30,6 @@ export function useGameState(
   const [theme, setTheme] = useState<ThemeState>("neutral");
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // at the start of the game, load the first quote
   useEffect(() => {
     fetchQuote();
   }, [fetchQuote]);
@@ -68,12 +67,12 @@ export function useGameState(
       if (isAnimating || !currentQuote) return;
       setIsAnimating(true);
 
-      // correct, when user pressed "real" and quote is real
-      //           OR quote is fake and user pressed fake
       const correct = guessedReal === currentQuote.isReal;
 
+      let newStreak = 0;
+
       setState((prev) => {
-        const newStreak = correct ? prev.streak + 1 : 0;
+        newStreak = correct ? prev.streak + 1 : 0;
         const newBestStreak = Math.max(prev.bestStreak, newStreak);
         const newHistory = [...prev.history, correct].slice(-HISTORY_MAX);
 
@@ -96,17 +95,11 @@ export function useGameState(
 
       if (correct) {
         setTheme("correct");
-        setTimeout(() => {
-          setState((s) => {
-            triggerConfetti(s.streak);
-            return s;
-          });
-        }, 50);
+        setTimeout(() => triggerConfetti(newStreak), 50);
       } else {
         setTheme("wrong");
       }
 
-      // load next quote after a short delay to let the user see the result
       setTimeout(async () => {
         setTheme("neutral");
         setState((prev) => ({ ...prev, phase: "loading", lastCorrect: null }));
