@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { CurrentQuote, GamePhase } from "../types";
+import type { CurrentQuote, GamePhase } from "../types";
 
 interface Props {
   currentQuote: CurrentQuote | null;

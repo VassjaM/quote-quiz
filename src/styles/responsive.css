@@ -1,0 +1,40 @@
+/* - RESPONSIVE MOBILE - */
+@media (max-width: 600px) {
+  .app-body { padding: 12px; align-items: flex-start; padding-top: 16px; }
+  .bento {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  .card-streak {
+    grid-column: 1; grid-row: 1;
+    padding: 12px 8px;
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: center; gap: 8px;
+  }
+  .streak-fire { font-size: 20px; margin-bottom: 0; display: inline; }
+  .streak-num { font-size: 28px; }
+  .streak-label { display: none; }
+  .card-score { grid-column: 2; grid-row: 1; padding: 12px 8px; }
+  .score-big { font-size: 32px; }
+  .score-total { font-size: 9px; }
+  .score-bar-wrap { margin-top: 6px; }
+  .card-history { grid-column: 3; grid-row: 1; padding: 12px 10px; }
+  .history-title { margin-bottom: 6px; font-size: 9px; }
+  .dot { width: 8px; height: 8px; }
+  .card-quote { grid-column: 1 / -1; grid-row: 2; padding: 20px; gap: 14px; min-height: 280px; }
+  .card-quote::before { font-size: 60px; }
+  .quote-text { font-size: 24px; }
+  .card-profile { grid-column: 1 / 2; grid-row: 3 / 5; padding: 14px; gap: 8px; }
+  .avatar { width: 52px; height: 52px; font-size: 24px; }
+  .profile-name { font-size: 16px; }
+  .profile-sub { display: none; }
+  .mood-label { font-size: 9px; padding: 3px 7px; }
+  /* Skip + About nebeneinander unten rechts */
+  .card-skip { grid-column: 2 / -1; grid-row: 3; padding: 10px; }
+  .card-about { grid-column: 2 / -1; grid-row: 4; padding: 10px; }
+  .skip-btn-big { padding: 10px 8px; }
+  .skip-label { font-size: 10px; }
+  .annotation { display: none; }
+  .feedback-text { font-size: 44px; }
+  .toast { bottom: 16px; }
+}

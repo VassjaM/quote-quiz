@@ -3,7 +3,19 @@
 @import './styles/reset.css';
 @import './styles/variables.css';
 @import './styles/bento.css';
+@import './styles/base-card.css';
+@import './styles/profile-card.css';
+@import './styles/streak-card.css';
+@import './styles/quote-card.css';
+@import './styles/buttons.css';
+@import './styles/score-card.css';
+@import './styles/history-card.css';
+@import './styles/skip-card.css';
+@import './styles/about-card.css';
+@import './styles/toast.css';
+@import './styles/labels.css';
+@import './styles/feedback.css';
+@import './styles/animations.css';
+@import './styles/responsive.css';
 
-
-/* TODO: add all imports here */
 

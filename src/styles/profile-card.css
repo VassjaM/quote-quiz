@@ -1,0 +1,35 @@
+/* - PROFILE CARD - */
+.card-profile {
+  grid-column: 1; grid-row: 1 / 3;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px; text-align: center;
+}
+.avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border: 2px solid var(--accent-color);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px;
+  transition: border-color 0.4s;
+  position: relative; overflow: hidden;
+}
+.avatar::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 60%);
+}
+.mood-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--accent-color);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--accent-dim-color);
+  padding: 4px 10px; border-radius: 20px;
+  border: 1px solid rgba(212,168,67,0.25);
+  transition: all 0.4s;
+}
+.profile-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 0.05em; color: var(--text-color);
+}
+.profile-sub { font-size: 11px; color: var(--muted-color); line-height: 1.5; }
