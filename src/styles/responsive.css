@@ -1,5 +1,5 @@
-/* - RESPONSIVE TABLET - */
-@media (max-width: 600px) {
+/* - RESPONSIVE PHONE - */
+@media (max-width: 768px) {
   .app-body { padding: 12px; align-items: flex-start; padding-top: 16px; }
   .bento {
     grid-template-columns: 1fr 1fr 1fr;
