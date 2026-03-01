@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import confetti from "canvas-confetti";
-import { GameState, ThemeState, CurrentQuote } from "../types";
+import type { GameState, ThemeState, CurrentQuote } from "../types";
 
 const HISTORY_MAX = 10;
 const LS_KEY = "kanye-quiz-best-streak";

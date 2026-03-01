@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react'
-import { CurrentQuote } from '../types'
+import type { CurrentQuote } from '../types'
 import fakeQuotesData from '../data/fakeQuotes.json'
 
 const fakeQuotes: string[] = fakeQuotesData as string[]
