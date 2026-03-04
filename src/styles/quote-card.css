@@ -38,6 +38,7 @@
   color: var(--muted-color);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  align-self: center;
 }
 .quote-text {
   font-family: var(--font-secondary);

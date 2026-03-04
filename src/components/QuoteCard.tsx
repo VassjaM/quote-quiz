@@ -75,7 +75,7 @@ export default function QuoteCard({
         </div>
       )}
 
-      <div className="quote-tag">Quote #{quoteIndex} · Round 1</div>
+      <div className="quote-tag">Quote #{quoteIndex}</div>
 
       <div
         className="quote-text"
