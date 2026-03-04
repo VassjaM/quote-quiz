@@ -2,6 +2,11 @@
 
 :root {
   /* - COLORS - */
+  --muted-color: #666;
+  --accent-color-rgb: 212, 168, 67;
+  --correct-color-rgb: 74, 222, 128;
+  --wrong-color-rgb: 248, 113, 113;
+
   --bg-color: #0a0a0a;
   --button-bg-hover-color: rgba(248, 113, 113, 0.1);
 
@@ -23,6 +28,8 @@
   --button-real-border-color: rgba(212, 168, 67, 0.4);
   --mood-label-border-color: rgba(212, 168, 67, 0.25);
 
+  --dot-correct-color: rgba(var(--correct-color-rgb));
+  --dot-wrong-color: rgba(var(--wrong-color-rgb));
   --dot-bg-color: #222;
   --dot-border-color: #333;
 
@@ -31,11 +38,6 @@
   --toast-box-shadow-color:
     0 8px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
 
-  --muted-color: #666;
-  --accent-color: #d4a843;
-  --accent-dim-color: rgba(212, 168, 67, 0.12);
-  --correct-color: #4ade80;
-  --wrong-color: #f87171;
 
   /* - RADIUS - */
   --radius: 20px;
@@ -48,14 +50,14 @@
 
 /* - THEME STATES - */
 .state-correct {
-  --accent-color: #4ade80;
-  --accent-dim-color: rgba(74, 222, 128, 0.12);
+  --accent-color: rgba(var(--correct-color-rgb));
+  --accent-dim-color: rgba(var(--correct-color-rgb), 0.12);
 }
 .state-wrong {
-  --accent-color: #f87171;
-  --accent-dim-color: rgba(248, 113, 113, 0.12);
+  --accent-color: rgba(var(--wrong-color-rgb));
+  --accent-dim-color: rgba(var(--wrong-color-rgb), 0.12);
 }
 .state-neutral {
-  --accent-color: #d4a843;
-  --accent-dim-color: rgba(212, 168, 67, 0.12);
+  --accent-color: rgba(var(--accent-color-rgb));
+  --accent-dim-color: rgba(var(--accent-color-rgb), 0.12);
 }
