@@ -1,9 +1,25 @@
 /* - STREAK CARD - */
-.card-streak { grid-column: 1; grid-row: 3; text-align: center; }
-.streak-fire { font-size: 28px; display: block; margin-bottom: 4px; }
+.card-streak {
+  grid-column: 1;
+  grid-row: 3;
+  text-align: center;
+}
+.streak-fire {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 4px;
+}
 .streak-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px; color: var(--accent-color); line-height: 1;
+  font-family: var(--font-secondary);
+  font-size: 40px;
+  color: var(--accent-color);
+  line-height: 1;
   transition: color 0.4s;
 }
-.streak-label { font-size: 10px; color: var(--muted-color); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+.streak-label {
+  font-size: 10px;
+  color: var(--muted-color);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}

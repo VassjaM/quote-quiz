@@ -3,19 +3,23 @@
   padding: 12px;
 }
 .card-skip {
-  grid-column: 3; grid-row: 3;
-  display: flex; align-items: center; justify-content: center; gap: 10px;
+  grid-column: 3;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   border: 1px solid var(--border-color);
   background: transparent;
   color: var(--muted-color);
   cursor: pointer;
   transition: all 0.25s;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-primary);
 }
 .card-skip:hover {
   color: var(--text-color);
-  border-color: #555;
-  background: rgba(255,255,255,0.03);
+  border-color: var(--skip-card-border-hover-color);
+  background: var(--skip-card-bg-color);
   transform: translateY(-1px);
 }
 .skip-icon {
@@ -26,7 +30,7 @@
   transform: rotate(-180deg);
 }
 .skip-label {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-subtitle);
   font-size: 11px;
   letter-spacing: 0.06em;
 }

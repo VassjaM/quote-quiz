@@ -3,10 +3,34 @@
 :root {
   /* - COLORS - */
   --bg-color: #0a0a0a;
+  --button-bg-hover-color: rgba(248, 113, 113, 0.1);
+
+  --score-bar-bg-color: #1e1e1e;
+
   --text-color: #f0ece4;
+  --annotation-color: rgba(212, 168, 67, 0.4);
+
   --card-color: #141414;
   --card-hover-color: #1a1a1a;
+
+  --skip-card-bg-color: rgba(255, 255, 255, 0.03);
+  --skip-card-border-hover-color: #555;
+
+  --avatar-bg-color: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+
   --border-color: #2a2a2a;
+  --border-hover-color: rgba(212, 168, 67, 0.3);
+  --button-real-border-color: rgba(212, 168, 67, 0.4);
+  --mood-label-border-color: rgba(212, 168, 67, 0.25);
+
+  --dot-bg-color: #222;
+  --dot-border-color: #333;
+
+  --toast-bg-color: #1c1c1c;
+  --toast-border-color: #333;
+  --toast-box-shadow-color:
+    0 8px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+
   --muted-color: #666;
   --accent-color: #d4a843;
   --accent-dim-color: rgba(212, 168, 67, 0.12);
@@ -18,7 +42,8 @@
 
   /* - FONTS - */
   --font-primary: "DM Sans", sans-serif;
-  /* TODO: add CSS variables here */
+  --font-secondary: "Bebas Neue", sans-serif;
+  --font-subtitle: "DM Mono", monospace;
 }
 
 /* - THEME STATES - */

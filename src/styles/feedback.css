@@ -1,13 +1,25 @@
 /* - FEEDBACK - */
 .feedback-text {
-  position: absolute; top: 50%; left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px; letter-spacing: 0.05em;
-  opacity: 0; pointer-events: none;
-  transition: all 0.2s; z-index: 10;
+  font-family: var(--font-secondary);
+  font-size: 64px;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+  z-index: 10;
   text-shadow: 0 0 30px currentColor;
 }
-.feedback-text.show { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-.feedback-text.correct { color: var(--correct-color); }
-.feedback-text.wrong { color: var(--wrong-color); }
+.feedback-text.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.feedback-text.correct {
+  color: var(--correct-color);
+}
+.feedback-text.wrong {
+  color: var(--wrong-color);
+}

@@ -9,6 +9,6 @@
   overflow: hidden;
 }
 .card:hover {
-  border-color: rgba(212,168,67,0.3);
+  border-color: var(--border-hover-color);
   background: var(--card-hover-color);
 }

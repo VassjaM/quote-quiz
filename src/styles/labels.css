@@ -1,6 +1,12 @@
 /* - ANNOTATION LABELS - */
 .annotation {
-  position: absolute; font-size: 9px; font-family: 'DM Mono', monospace;
-  color: rgba(212,168,67,0.4); letter-spacing: 0.08em; text-transform: uppercase;
-  pointer-events: none; top: 8px; right: 12px;
+  position: absolute;
+  font-size: 9px;
+  font-family: var(--font-subtitle);
+  color: var(--annotation-color);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  top: 8px;
+  right: 12px;
 }
