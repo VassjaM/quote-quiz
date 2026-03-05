@@ -24,7 +24,7 @@ export function useGameState(
     history: [],
     phase: "idle",
     lastCorrect: null,
-    quoteIndex: 0,
+    quoteIndex: 1,
   });
 
   const [theme, setTheme] = useState<ThemeState>("neutral");
