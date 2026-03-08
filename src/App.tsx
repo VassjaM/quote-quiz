@@ -8,6 +8,7 @@ import HistoryCard from "./components/HistoryCard";
 import SkipCard from "./components/SkipCard";
 import AboutCard from "./components/AboutCard";
 import GameTitle from "./components/GameTitle";
+import Footer from "./components/Footer";
 
 function App() {
   const { currentQuote, loading, fetchQuote } = useKanyeQuote();
@@ -47,6 +48,7 @@ function App() {
           <AboutCard />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

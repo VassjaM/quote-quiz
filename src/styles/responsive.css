@@ -1,9 +1,9 @@
 /* - RESPONSIVE PHONE - */
 @media (max-width: 768px) {
   .app-body {
-    padding: 12px;
+    padding:0 12px;
     align-items: flex-start;
-    padding-top: 16px;
+    padding-top: 80px;
   }
   .bento {
     grid-template-columns: 1fr 1fr 1fr;
@@ -122,5 +122,11 @@
   }
   .game-title-sub {
     font-size: 10px;
+  }
+  .footer {
+    max-width: 100%;
+    padding: 12px 16px;
+    font-size: 9px;
+    align-self: center;
   }
 }
