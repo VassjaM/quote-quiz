@@ -18,8 +18,8 @@ export default function AboutCard() {
 
     timerRef.current = setTimeout(() => {
       setToast({ visible: true, exiting: true });
-      setTimeout(() => setToast({ visible: false, exiting: false }), 400);
-    }, 3500);
+      setTimeout(() => setToast({ visible: false, exiting: false }), 2000);
+    }, 7000);
   };
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function AboutCard() {
         >
           <span className="about-icon">?</span>
         </button>
-        <div className="about-title">How to play</div>
+        <div className="about-title">Credits</div>
       </div>
 
       {toast.visible && (
@@ -48,11 +48,12 @@ export default function AboutCard() {
         >
           <div className="toast-emoji">🎤</div>
           <div className="toast-content">
-            <div className="toast-title">How to play</div>
+            <div className="toast-title">About this project</div>
             <div className="toast-body">
-              A Kanye quote appears — you decide if it's <strong>real</strong>{" "}
-              or <strong>fake</strong>. Every quote from the API is real. Try
-              not to get fooled!
+              A fun little project built with <strong>React</strong> &{" "}
+              <strong>TypeScript</strong>. Real quotes are fetched live from{" "}
+              <strong>kanye.rest</strong>. Fake quotes were written by hand to
+              fool you.
             </div>
           </div>
           <button
