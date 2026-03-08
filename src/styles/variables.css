@@ -13,7 +13,7 @@
   --score-bar-bg-color: #1e1e1e;
 
   --text-color: #f0ece4;
-  --annotation-color: rgba(212, 168, 67, 0.4);
+  --annotation-color: rgba(var(--accent-color-rgb), 0.4);
 
   --card-color: #141414;
   --card-hover-color: #1a1a1a;

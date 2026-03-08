@@ -10,20 +10,20 @@ interface Props {
 
 export default function ProfileCard({ lastCorrect, phase }: Props) {
   const [avatar, setAvatar] = useState("😐");
-  const [mood, setMood] = useState("😑 Unimpressed");
+  const [mood, setMood] = useState("Unimpressed");
 
   useEffect(() => {
     if (phase === "answered") {
       if (lastCorrect) {
         setAvatar("😤");
-        setMood("😤 That's right");
+        setMood("That's right");
       } else {
         setAvatar("😒");
-        setMood("😒 Disappointed");
+        setMood("Disappointed");
       }
     } else if (phase === "idle") {
       setAvatar("😐");
-      setMood("😑 Unimpressed");
+      setMood("Unimpressed");
     }
   }, [phase, lastCorrect]);
 
