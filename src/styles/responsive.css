@@ -2,8 +2,8 @@
 @media (max-width: 768px) {
   .app-body {
     padding:0 12px;
+    padding-top: max(24px, env(safe-area-inset-top));
     align-items: flex-start;
-    padding-top: 80px;
   }
   .bento {
     grid-template-columns: 1fr 1fr 1fr;
@@ -115,7 +115,7 @@
     bottom: 6%;
   }
   .game-title {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .game-title-main {
     font-size: 48px;
@@ -128,5 +128,6 @@
     padding: 12px 16px;
     font-size: 9px;
     align-self: center;
+    margin-top: 24px;
   }
 }
